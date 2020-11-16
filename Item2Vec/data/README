@@ -1,0 +1,11 @@
+数据集：百度网盘/ml-latest-small
+
+ratings.csv
+userId,movieId,rating,timestamp
+1,1,4.0,964982703
+
+movies.csv
+movieId,title,genres
+1,Toy Story (1995),Adventure|Animation|Children|Comedy|Fantasy
+
+
