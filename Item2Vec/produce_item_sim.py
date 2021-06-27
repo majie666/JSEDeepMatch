@@ -52,7 +52,7 @@ def cal_item_sim(item_vec,itemid,output_file):
     fw = open(output_file,"w+")
     out_str = itemid+"\t"
     tmp_list = []
-    item_info = get_item_info('../data/movies.csv')
+    item_info = get_item_info('data/movies.csv')
     print('推荐与该电影相似的电影：', item_info[itemid])
     print('推荐列表top10：')
     for zuhe in sorted(score.items(),key=operator.itemgetter(1),reverse=True)[:topk]:
@@ -98,7 +98,7 @@ def run_main(input_file,output_file):
     cal_item_sim(item_vec,"27",output_file)
 
 if __name__=="__main__":
-    # item_vec = load_item_vec("../data/item_vec.txt")
+    # item_vec = load_item_vec("data/item_vec.txt")
     # print len(item_vec)
     # print item_vec["318"]
-    run_main("../data/item_vec.txt","../data/sim_result.txt")
+    run_main("data/item_vec.txt","data/sim_result.txt")

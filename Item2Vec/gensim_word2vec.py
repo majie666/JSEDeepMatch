@@ -10,4 +10,4 @@ model.wv.save_word2vec_format('../data/item_vec.txt',binary = False)
 # model = gensim.models.Word2Vec.load('../data/word2vec_model')
 # model.train(more_sentences)
 # print model.wv["1"]
-print model.most_similar("27")
+print(model.most_similar("27"))

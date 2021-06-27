@@ -4,7 +4,7 @@
 # Date: 2019/6/3
 
 import numpy as np
-from util import read
+import read
 import operator
 
 def lfm_train(train_data,F,alpha,beta,step):
@@ -60,7 +60,7 @@ def model_train_process():
     test lfm model train
     :return:
     '''
-    train_data = read.get_train_data('../data/ratings.csv')
+    train_data = read.get_train_data('data/ratings.csv')
     user_vec,item_vec = lfm_train(train_data,50,0.01,0.1,50)
     # print user_vec["1"]
     # print item_vec["1"]
@@ -92,7 +92,7 @@ def give_recom_result(user_vec, item_vec, userid):
         record[itemid] = res                    # record={'itemid':'res'}
         # record_list = list(record.items())      # record.items()=[(itemid,res),(itemid,res)]   在此用list转换格式是Python3的不兼容问题
     # for zuhe in sorted(record.items(), key=lambda rec: record_list[1], reverse=True)[:fix_num]:
-    for zuhe in sorted(record.iteritems(), key=operator.itemgetter(1), reverse=True)[:fix_num]:
+    for zuhe in sorted(record.items(), key=operator.itemgetter(1), reverse=True)[:fix_num]:
         itemid = zuhe[0]
         score = round(zuhe[1],3)
         recom_list.append((itemid,score))
@@ -106,7 +106,7 @@ def ana_recom_result(train_data,userid,recom_list):
     :param userid: 分析的用户
     :param recom_list:模型给出的推荐结果
     '''
-    item_info = read.get_item_info('../data/movies.csv')
+    item_info = read.get_item_info('data/movies.csv')
     for data_instance in train_data:
         userid1,itemid,label = data_instance
         if userid1 == userid and label == 1:

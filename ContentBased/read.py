@@ -14,7 +14,7 @@ def get_item_info(input_file):
         return {}
     linenum = 0
     item_info = {}
-    with open(input_file) as fp:
+    with open(input_file, encoding='utf-8') as fp:
         for line in fp:
             if linenum == 0:
                 linenum += 1
@@ -79,7 +79,7 @@ def get_item_cate(ave_score, input_file):
     item_cate = {}
     record = {}
     cate_item_sort = {}
-    fp = open(input_file)
+    fp = open(input_file, encoding='utf-8')
     for line in fp:
         if linenum == 0:
             linenum += 1
@@ -105,7 +105,7 @@ def get_item_cate(ave_score, input_file):
     for cate in record:
         if cate not in cate_item_sort:
             cate_item_sort[cate] = []
-        for zuhe in sorted(record[cate].iteritems(), key=operator.itemgetter(1), reverse=True)[:topk]:
+        for zuhe in sorted(record[cate].items(), key=operator.itemgetter(1), reverse=True)[:topk]:
             cate_item_sort[cate].append(zuhe[0])
     return item_cate, cate_item_sort
 
@@ -132,19 +132,17 @@ def get_latest_timestamp(input_file):
         if timestamp > latest:
             latest = timestamp
     fp.close()
-    print
-    latest
+    print(latest)
     # ans is :1476086345
 
 
 if __name__ == "__main__":
-    avg_score = get_ave_score("../data/ratings.csv")
-    print
-    len(avg_score)
-    print
-    avg_score["31"]
-    item_cate, cate_item_sort = get_item_cate(avg_score, "../data/movies.csv")
-    print
-    item_cate["1"]
-    print
-    cate_item_sort["Children"]
+    avg_score = get_ave_score("data/ratings.csv")
+    print(len(avg_score))
+    
+    print(avg_score["31"])
+    
+    item_cate, cate_item_sort = get_item_cate(avg_score, "data/movies.csv")
+    print(item_cate["1"])
+    
+    print(cate_item_sort["Children"])

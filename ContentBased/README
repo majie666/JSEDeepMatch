@@ -1,0 +1,48 @@
+TensorFlow1.0
+
+数据集：百度网盘/ml-latest-small
+
+ratings.csv
+userId,movieId,rating,timestamp
+1,1,4.0,964982703
+
+movies.csv
+movieId,title,genres
+1,Toy Story (1995),Adventure|Animation|Children|Comedy|Fantasy
+
+
+
+参考LFM用户评分>=3：
+
+['Heat (1995)', 'Action|Crime|Thriller']
+['Dead Man Walking (1995)', 'Crime|Drama']
+['Braveheart (1995)', 'Action|Drama|War']
+['Apollo 13 (1995)', 'Adventure|Drama|IMAX']
+['Hackers (1995)', 'Action|Adventure|Crime|Thriller']
+['Outbreak (1995)', 'Action|Drama|Sci-Fi|Thriller']
+['"Shawshank Redemption, The (1994)"', 'Crime|Drama']
+['Clear and Present Danger (1994)', 'Action|Crime|Drama|Thriller']
+['Forrest Gump (1994)', 'Comedy|Drama|Romance|War']
+['True Lies (1994)', 'Action|Adventure|Comedy|Romance|Thriller']
+['"Fugitive, The (1993)"', 'Thriller']
+['In the Line of Fire (1993)', 'Action|Thriller']
+['Jurassic Park (1993)', 'Action|Adventure|Sci-Fi|Thriller']
+['"Program, The (1993)"', 'Action|Drama']
+['Searching for Bobby Fischer (1993)', 'Drama']
+['Terminator 2: Judgment Day (1991)', 'Action|Sci-Fi']
+['"Silence of the Lambs, The (1991)"', 'Crime|Horror|Thriller']
+['Mission: Impossible (1996)', 'Action|Adventure|Mystery|Thriller']
+['"Rock, The (1996)"', 'Action|Adventure|Thriller']
+['Twister (1996)', 'Action|Adventure|Romance|Thriller']
+['Independence Day (a.k.a. ID4) (1996)', 'Action|Adventure|Sci-Fi|Thriller']
+['Top Gun (1986)', 'Action|Romance']
+['Star Wars: Episode VI - Return of the Jedi (1983)', 'Action|Adventure|Sci-Fi']
+
+[('Drama', 0.531), ('Action', 0.469)]
+result---
+['61* (2001)', 'Drama']
+['Lady Jane (1986)', 'Drama|Romance']
+['Front of the Class (2008)', 'Drama']
+['Justice League: Doom (2012) ', 'Action|Animation|Fantasy']
+['Battle Royale 2: Requiem (Batoru rowaiaru II: Chinkonka) (2003)', 'Action|Drama|Thriller|War']
+["On the Other Side of the Tracks (De l'autre) (2012)", 'Action|Comedy|Crime']

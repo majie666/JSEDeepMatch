@@ -11,7 +11,7 @@ from scipy.sparse import coo_matrix
 #        [0, 0, 0, 0],
 #        [0, 0, 0, 5]])
 import numpy as np
-from util import read
+import read
 
 # 1.由之前的二分图得到矩阵公式中的M矩阵，所有(item+user)顶点，所有(item+user)顶点位置（为了求r）
 def graph_to_m(graph):

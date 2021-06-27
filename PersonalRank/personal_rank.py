@@ -2,9 +2,9 @@
 from __future__ import division
 from scipy.sparse import coo_matrix
 import numpy as np
-from util import read
+import read
 import operator
-from util import mat_util
+import mat_util
 # 求稀疏矩阵的逆 Ax=B -> B可是nxn或nx1
 from scipy.sparse.linalg import gmres
 
@@ -63,11 +63,11 @@ def get_one_recom():
     '''
     user = "11"
     alpha = 0.8
-    graph = read.get_graph_from_data('../data/ratings.csv')
+    graph = read.get_graph_from_data('data/ratings.csv')
     iter_num = 100
     pr_recom_result = personal_rank(graph, user, alpha, iter_num, 5)
 
-    item_info = read.get_item_info("../data/movies.csv")
+    item_info = read.get_item_info("data/movies.csv")
     for itemid in graph[user]:
         pure_item_id = itemid.split("_")[1]
         print(item_info[pure_item_id])
@@ -129,10 +129,10 @@ def get_one_recom_matrix():
     '''
     user = "11"
     alpha = 0.8
-    graph = read.get_graph_from_data('../data/ratings.csv')
+    graph = read.get_graph_from_data('data/ratings.csv')
     pr_recom_result = personal_rank_matrix(graph, user, alpha, 5)
 
-    item_info = read.get_item_info("../data/movies.csv")
+    item_info = read.get_item_info("data/movies.csv")
     for itemid in graph[user]:
         pure_item_id = itemid.split("_")[1]
         print(item_info[pure_item_id])

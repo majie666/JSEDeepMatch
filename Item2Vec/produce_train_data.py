@@ -12,7 +12,7 @@ def produce_train_data(input_file,out_file):
     record = {}
     score_thr = 4.0
     num = 0
-    fp = open(input_file)
+    fp = open(input_file, encoding='utf-8')
     for line in fp:
         if num == 0:
             num += 1
@@ -40,4 +40,4 @@ if __name__=="__main__":
     #     inputfile = sys.argv[1]
     #     outputfile = sys.argv[2]
     #     produce_train_data(inputfile,outputfile)
-    produce_train_data("../data/ratings.csv","../data/train_data.txt")
+    produce_train_data("data/ratings.csv","data/train_data.txt")

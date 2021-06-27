@@ -12,7 +12,7 @@ def get_item_info(item_file):
     if not os.path.exists(item_file):
         return {}
     num = 0
-    fp = open(item_file)
+    fp = open(item_file, encoding='utf-8')
     item_info ={}
     for line in fp:
         if num == 0:

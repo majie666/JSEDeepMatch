@@ -1,0 +1,62 @@
+TensorFlow1.0
+
+数据集：百度网盘/ml-latest-small
+
+ratings.csv
+userId,movieId,rating,timestamp
+1,1,4.0,964982703
+
+movies.csv
+movieId,title,genres
+1,Toy Story (1995),Adventure|Animation|Children|Comedy|Fantasy
+
+
+
+out27 参考LFM用户评分>=3：
+['Heat (1995)', 'Action|Crime|Thriller']
+['Dead Man Walking (1995)', 'Crime|Drama']
+['Braveheart (1995)', 'Action|Drama|War']
+['Apollo 13 (1995)', 'Adventure|Drama|IMAX']
+['Hackers (1995)', 'Action|Adventure|Crime|Thriller']
+['Outbreak (1995)', 'Action|Drama|Sci-Fi|Thriller']
+['"Shawshank Redemption, The (1994)"', 'Crime|Drama']
+['Clear and Present Danger (1994)', 'Action|Crime|Drama|Thriller']
+['Forrest Gump (1994)', 'Comedy|Drama|Romance|War']
+['True Lies (1994)', 'Action|Adventure|Comedy|Romance|Thriller']
+['"Fugitive, The (1993)"', 'Thriller']
+['In the Line of Fire (1993)', 'Action|Thriller']
+['Jurassic Park (1993)', 'Action|Adventure|Sci-Fi|Thriller']
+['"Program, The (1993)"', 'Action|Drama']
+['Searching for Bobby Fischer (1993)', 'Drama']
+['Terminator 2: Judgment Day (1991)', 'Action|Sci-Fi']
+['"Silence of the Lambs, The (1991)"', 'Crime|Horror|Thriller']
+['Mission: Impossible (1996)', 'Action|Adventure|Mystery|Thriller']
+['"Rock, The (1996)"', 'Action|Adventure|Thriller']
+['Twister (1996)', 'Action|Adventure|Romance|Thriller']
+['Independence Day (a.k.a. ID4) (1996)', 'Action|Adventure|Sci-Fi|Thriller']
+['Top Gun (1986)', 'Action|Romance']
+['Star Wars: Episode VI - Return of the Jedi (1983)', 'Action|Adventure|Sci-Fi']
+
+result---get_one_recom
+['Pulp Fiction (1994)', 'Comedy|Crime|Drama|Thriller']
+0.06610000000000002
+['Batman (1989)', 'Action|Crime|Thriller']
+0.05150000000000001
+['Star Wars: Episode IV - A New Hope (1977)', 'Action|Adventure|Sci-Fi']
+0.045700000000000005
+['Dances with Wolves (1990)', 'Adventure|Drama|Western']
+0.045299999999999986
+['Seven (a.k.a. Se7en) (1995)', 'Mystery|Thriller']
+0.045
+
+result---get_one_recom_matrix
+['Pulp Fiction (1994)', 'Comedy|Crime|Drama|Thriller']
+0.006
+['Batman (1989)', 'Action|Crime|Thriller']
+0.005
+['Toy Story (1995)', 'Adventure|Animation|Children|Comedy|Fantasy']
+0.004
+['Seven (a.k.a. Se7en) (1995)', 'Mystery|Thriller']
+0.004
+['"Usual Suspects, The (1995)"', 'Crime|Mystery|Thriller']
+0.004
